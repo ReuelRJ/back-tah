@@ -1,0 +1,35 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "servidor para pontuar kids ",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./App.js",
+    "local": "heroku local web",
+    "preinstall": "npm config set package-lock false",
+    "start": "node ./App.js",
+    "build": "npm install"
+  },
+  "author": "Reuel Albuquerque e Bruno Costa",
+  "license": "ISC",
+  "engines": {
+    "node": "^14.x",
+    "npm": "^6.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.0",
+    "heroku": "^7.53.0",
+    "math": "0.0.3",
+    "moment": "^2.29.1",
+    "pg-hstore": "^2.3.3",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
