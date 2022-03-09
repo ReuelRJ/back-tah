@@ -1,7 +1,7 @@
 {
   "name": "back",
   "version": "1.0.0",
-  "description": "servidor para pontuar kids ",
+  "description": "servidor de APIs da ficha de personagens de jogadores ",
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

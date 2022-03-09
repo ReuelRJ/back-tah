@@ -9,9 +9,13 @@ const sequelize = new Sequelize(
   commons.objAdress
 );
 
+class Habilidade extends Model{}
+
 class Manutencao {
   async tables() {
     console.log("Tentando incluir tabelas!");
+
+    await Habilidade.sync()
 
     console.log("");
     console.log("DONE!");
@@ -47,4 +51,5 @@ man.createTables();
 
 module.exports = {
   sequelize,
+  Habilidade
 };
