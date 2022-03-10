@@ -11,7 +11,7 @@ Habilidade.init({
         type:Sequelize.STRING,
         allowNull: false
     },
-    custoModificador: {
+    custoModFol: {
         type:Sequelize.INTEGER,
         allowNull: false
     },

@@ -1,12 +1,12 @@
 const HabilidadeDAO = require("../model/habilidade");
 
-function create(nome, custoModificador, tipoAlcance) {
+function create(nome, custoModFol, tipoAlcance) {
   return new Promise((resolve, reject) => {
     HabilidadeDAO.sync()
       .then(() =>
         HabilidadeDAO.create({
           nome: nome,
-          custoModificador: custoModificador,
+          custoModFol: custoModFol,
           tipoAlcance: tipoAlcance,
         })
       )
