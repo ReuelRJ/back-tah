@@ -47,7 +47,7 @@ class Manutencao {
   }
 }
 const man = new Manutencao();
-man.createTables();
+//man.createTables();
 
 module.exports = {
   sequelize,
