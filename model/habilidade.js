@@ -11,16 +11,8 @@ Habilidade.init({
         type:Sequelize.STRING,
         allowNull: false
     },
-    mana: {
+    custoModificador: {
         type:Sequelize.INTEGER,
-        allowNull: false
-    },
-    tipoMagia: {
-        type:Sequelize.STRING,
-        allowNull: false
-    },    
-    tipoDano: {
-        type:Sequelize.STRING,
         allowNull: false
     },
     tipoAlcance: {
