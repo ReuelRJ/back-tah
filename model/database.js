@@ -11,6 +11,7 @@ const sequelize = new Sequelize(
 
 class Habilidade extends Model{}
 class Magia extends Model{}
+class VantagemDesvantagem extends Model{}
 
 class Manutencao {
   async tables() {
@@ -18,6 +19,7 @@ class Manutencao {
 
     await Habilidade.sync()
     await Magia.sync()
+    await VantagemDesvantagem.sync()
 
     console.log("");
     console.log("DONE!");
@@ -54,5 +56,6 @@ const man = new Manutencao();
 module.exports = {
   sequelize,
   Habilidade,
-  Magia
+  Magia,
+  VantagemDesvantagem
 };
