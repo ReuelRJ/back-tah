@@ -1,17 +1,17 @@
-const HabilidadeDAO = require("../model/habilidade");
+const MagiaDAO = require("../model/magia");
 
 function create(nome, ponto, atributo, tipoAlcance) {
   return new Promise((resolve, reject) => {
-    HabilidadeDAO.sync()
+    MagiaDAO.sync()
       .then(() =>
-        HabilidadeDAO.create({
+        MagiaDAO.create({
           nome: nome,
           ponto: ponto,
-          atributo:atributo,
+          atributo: atributo,
           tipoAlcance: tipoAlcance,
         })
       )
-      .then((habilidade) => resolve(habilidade))
+      .then((magia) => resolve(magia))
       .catch((error) => {
         console.log("ERROR: " + error);
         reject(error);
@@ -21,9 +21,9 @@ function create(nome, ponto, atributo, tipoAlcance) {
 
 function findOne(id) {
   return new Promise((resolve, reject) => {
-    HabilidadeDAO.sync()
+    MagiaDAO.sync()
       .then(() =>
-        HabilidadeDAO.findOne({
+        MagiaDAO.findOne({
           where: { id: id },
         })
       )
@@ -37,8 +37,8 @@ function findOne(id) {
 
 function findAll() {
   return new Promise((resolve, reject) => {
-    HabilidadeDAO.sync()
-      .then(() => HabilidadeDAO.findAll())
+    MagiaDAO.sync()
+      .then(() => MagiaDAO.findAll())
       .then((data) => resolve(data))
       .catch((error) => {
         console.log("ERROR: " + error);
@@ -49,11 +49,9 @@ function findAll() {
 
 function remove(id) {
   return new Promise((resolve, reject) => {
-    HabilidadeDAO.sync()
+    MagiaDAO.sync()
       .then(() =>
-        HabilidadeDAO.findOne({ where: { id: id } }).then((habilidade) =>
-          habilidade.destroy()
-        )
+        MagiaDAO.findOne({ where: { id: id } }).then((magia) => magia.destroy())
       )
       .then((data) => resolve(data))
       .catch((error) => {
@@ -64,8 +62,8 @@ function remove(id) {
 }
 
 module.exports = {
-    create,
-    findAll,
-    findOne,
-    remove
-}
+  create,
+  findAll,
+  findOne,
+  remove,
+};

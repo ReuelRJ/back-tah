@@ -5,7 +5,8 @@ let HabilidadeDAO = require("../DAO/habilidade.dao");
 controllers.create = async (req, res) =>
   await HabilidadeDAO.create(
     req.body.nome,
-    req.body.custoModificador,
+    req.body.ponto,
+    req.body.atributo,
     req.body.tipoAlcance
   )
     .then((habilidade) =>
@@ -47,5 +48,4 @@ controllers.findOne = async (req, res) =>
       res.status(400).send({ msg: "Habilidade nao encontrada", Type: error })
     );
 
-
-module.exports = controllers
+module.exports = controllers;

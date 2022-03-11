@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
-const { sequelize, Habilidade } = require('./database');
+const { sequelize, Magia } = require('./database');
 
-Habilidade.init({
+
+Magia.init({
     id:{
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -25,8 +26,8 @@ Habilidade.init({
     }
 },{
     sequelize,
-    modelName: "habilidade",
+    modelName: "magia",
     timestamps: false
 })
 
-module.exports = Habilidade
+module.exports = Magia
