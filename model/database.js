@@ -18,10 +18,10 @@ class Manutencao {
   async tables() {
     console.log("Tentando incluir tabelas!");
 
-    await Habilidade.sync()
-    await Magia.sync()
-    await VantagemDesvantagem.sync()
-    await Personagem.sync()
+    await Habilidade.sync({force: true})
+    await Magia.sync({force: true})
+    await VantagemDesvantagem.sync({force: true})
+    await Personagem.sync({force: true})
 
     console.log("");
     console.log("DONE!");
